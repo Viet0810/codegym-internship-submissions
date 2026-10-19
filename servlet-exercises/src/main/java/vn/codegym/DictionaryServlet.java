@@ -1,0 +1,3 @@
+package vn.codegym;
+import jakarta.servlet.annotation.WebServlet;import jakarta.servlet.http.*;import java.io.*;import java.util.*;
+@WebServlet("/dictionary") public class DictionaryServlet extends HttpServlet{private final Map<String,String> words=Map.of("hello","xin chào","book","quyển sách","computer","máy tính","student","sinh viên");protected void doGet(HttpServletRequest r,HttpServletResponse s)throws IOException{s.setContentType("text/html;charset=UTF-8");s.getWriter().print("<form><input name='word' placeholder='English word' required><button>Tra cứu</button></form>");String w=r.getParameter("word");if(w!=null)s.getWriter().printf("<p>Kết quả: %s</p>",words.getOrDefault(w.toLowerCase(),"Không tìm thấy"));}}
