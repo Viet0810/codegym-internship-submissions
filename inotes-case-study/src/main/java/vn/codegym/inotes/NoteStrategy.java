@@ -1,0 +1,1 @@
+package vn.codegym.inotes;import java.util.*;public interface NoteStrategy{void save(Note note)throws Exception;void delete(int id)throws Exception;List<Note> findAll()throws Exception;List<Note> search(String keyword)throws Exception;}
