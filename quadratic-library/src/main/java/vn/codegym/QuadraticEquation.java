@@ -1,0 +1,1 @@
+package vn.codegym;public final class QuadraticEquation{private QuadraticEquation(){}public static double[] solve(double a,double b,double c){if(a==0){if(b==0)return new double[0];return new double[]{-c/b};}double d=b*b-4*a*c;if(d<0)return new double[0];if(d==0)return new double[]{-b/(2*a)};double root=Math.sqrt(d);return new double[]{(-b+root)/(2*a),(-b-root)/(2*a)};}}
